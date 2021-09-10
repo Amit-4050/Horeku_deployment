@@ -1,0 +1,28 @@
+<html>
+    <head>
+        
+
+
+    </head>
+
+    <body>
+        <h1>HomePage</h1>
+        <h2>HomePage</h2>
+
+        <p>Welcome to the home page</p>
+
+        <form method="post", action='/predict'>
+            <label for="fname">Firstname</label><br>
+            <input type="text", id="fname",  name="firstname", placeholder="firstname", required="required"><br><!--name is the variable name in which information gets stored-->
+            <label for="lname">Lastname</label><br>
+            <input type="text", id="lname", name="lastname", placeholder="lastname", required="required"><br>
+            <label for="email">Email</label><br>
+            <input type="email", id="email", name="email", placeholder="emailId", required="required"><br>
+            <label for="number">Ph_no</label><br>
+            <input type="number", id="number", name="number", placeholder="contactnumber", required="required"><br>
+            <button type="submit">Predict</button>
+        </form>
+    
+
+    </body>
+</html>
