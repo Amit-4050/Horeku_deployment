@@ -5,25 +5,9 @@ import joblib
 app = Flask(__name__)
 model = joblib.load('diab.pkl')
 
-# @app.route('/')
-# def hello_world():
-#     return render_template('home.html')
-
 @app.route('/')
 def data():
     return render_template('Diabatic.html')
-
-# @app.route('/predict', methods = ['post'])
-# def predict():
-#     first_name = request.form.get("firstname")
-#     last_name = request.form.get("lastname")
-#     email = request.form.get("email")
-#     Ph_no = request.form.get("number")
-#     print(first_name)
-#     print(last_name)
-#     print(email)
-#     print(Ph_no)
-#     return 'Form Submitted'
 
 @app.route('/predict', methods = ['post'])
 def predict():
@@ -48,4 +32,5 @@ def predict():
     return render_template('predict.html', predict = ans)
 
 #run the app
-app.run(debug = True)
+if __name__ == '__main__':
+    app.run(debug = True)
